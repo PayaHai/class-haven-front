@@ -21,7 +21,7 @@ let CFToken = null
 let isErr = ref(true)
 
 
-window.onloadTurnstileCallback = function () {
+/**window.onloadTurnstileCallback = function () {
     turnstile.render("#turnstile", {
         "sitekey": "0x4AAAAAAA0TMBPkuSIAZgUr",
         "callback": (token:string) => {
@@ -29,7 +29,7 @@ window.onloadTurnstileCallback = function () {
         },
         "error-callback": () => {}
     })
-}
+}**/
 </script>
 
 <template>
