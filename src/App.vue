@@ -31,7 +31,7 @@ function goBack() {
 <template>
     <div class="app-container">
         <mdui-navigation-rail divider>
-            <mdui-avatar src="./img/logo-1024.png" style="margin-bottom:20px;margin-top:20px;--shape-corner: 10px" onclick="window.location.href='/'"></mdui-avatar>
+            <mdui-avatar src="img/logo-1024.png" style="margin-bottom:20px;margin-top:20px;--shape-corner: 10px" onclick="window.location.href='/'"></mdui-avatar>
             <mdui-button-icon icon="refresh" slot="bottom" id="loading" :loading = "exData.isLoading.value"></mdui-button-icon>
 
             <mdui-navigation-rail-item icon="query_stats" @click="goPath('/results-query')">成绩查询</mdui-navigation-rail-item>
