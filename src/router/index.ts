@@ -5,8 +5,18 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: () => import('../views/Home.vue'),
+      name: '主页',
+      component: () => import('@/views/Home.vue'),
+    },
+    {
+      path: '/login',
+      name: '登陆',
+      component: () => import('@/views/Login.vue'),
+    },
+      {
+      path: '/results-query',
+      name: '成绩查询',
+      component: () => import('@/views/ResultsQuery.vue'),
     },
   ],
 })

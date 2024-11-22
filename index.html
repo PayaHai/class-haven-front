@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh_cn">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>班级之家 | 加载中...</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
+            defer
+        ></script>
+
+        <style>
+            .center-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; /* 使容器高度为视口高度 */
+            }
+        </style>
+
+        <title>班级之家 | 加载中...</title>
+    </head>
+    <body>
+        <div id="app"><div class="center-container">加载中...</div></div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
 </html>
