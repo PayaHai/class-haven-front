@@ -16,19 +16,27 @@ app.use(ElementPlus)
 import router from './router'
 app.use(router)
 
-if (!import.meta.env.DEV) {
-    console.log("请不要恶意调试。")
-    let startTime = new Date ();
-    debugger;
-    let endTime = new Date ();
-    let isDev = endTime.getTime() - startTime.getTime() > 100;
-    let stack = [];
-    if (isDev){
-        while (true){
-            stack.push(this);
-            console.log(stack.length,this)
-        }
+if (import.meta.env.DEV) {
+    console.log("请不要恶意调试。");
+
+    const checkDebugger = () => {
+       let startTime = performance.now();
+       debugger;
+       let endTime = performance.now();
+       let isDev = endTime - startTime > 100;
+
+       if (isDev) {
+           let stack: any[] = [];
+           while (true) {
+               stack.push(this);
+               console.log(stack.length, this);
+           }
+       } else {
+           setTimeout(checkDebugger, 1000); // 每秒检查一次
+       }
     }
+    setTimeout(checkDebugger, 1000); // 页面加载后1秒开始检查
 }
+
 
 app.mount('#app')
