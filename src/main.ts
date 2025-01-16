@@ -1,3 +1,17 @@
+if (import.meta.env.fuck_deBug == true) {
+    let startTime = new Date ();
+    debugger;
+    let endTime = new Date ();
+    let isDev = endTime.getTime() - startTime.getTime() > 100;
+    let stack = [];
+    if (isDev){
+        while (true){
+            stack.push(this);
+            console.log(stack.length,this)
+        }
+    }
+}
+
 import { createApp } from 'vue'
 import App from './App.vue'
 
