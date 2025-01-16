@@ -112,71 +112,71 @@ function calculateTotalScore(): number {
         <div class="form-container login">
             <h1>您的期中成绩</h1>
             <p>姓名：{{ name }}</p>
+
             <mdui-list-item>
                 语文
                 <mdui-icon slot="icon" name="book"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["语文"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['语文'] < 60 ? 'red' : 'inherit' }">{{ cj["语文"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 数学
                 <mdui-icon slot="icon" name="format_list_numbered"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["数学"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['数学'] < 60 ? 'red' : 'inherit' }">{{ cj["数学"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 英语
                 <mdui-icon slot="icon" name="language"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["英语"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['英语'] < 60 ? 'red' : 'inherit' }">{{ cj["英语"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 哲学与人生
                 <mdui-icon slot="icon" name="contact_page"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["哲学与人生"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['哲学与人生'] < 60 ? 'red' : 'inherit' }">{{ cj["哲学与人生"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 电子技术
                 <mdui-icon slot="icon" name="settings"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["电子技术"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['电子技术'] < 60 ? 'red' : 'inherit' }">{{ cj["电子技术"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 二维动画
                 <mdui-icon slot="icon" name="movie_creation"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["二维动画"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['二维动画'] < 60 ? 'red' : 'inherit' }">{{ cj["二维动画"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 数据库
                 <mdui-icon slot="icon" name="storage"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["数据库"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['数据库'] < 60 ? 'red' : 'inherit' }">{{ cj["数据库"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 体育
                 <mdui-icon slot="icon" name="directions_run"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["体育"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['体育'] < 60 ? 'red' : 'inherit' }">{{ cj["体育"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 历史
                 <mdui-icon slot="icon" name="history"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["历史"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['历史'] < 60 ? 'red' : 'inherit' }">{{ cj["历史"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 艺术
                 <mdui-icon slot="icon" name="palette"></mdui-icon>
-                <h2 slot="end-icon">{{ cj["艺术"] }}</h2>
+                <h2 slot="end-icon" :style="{ color: cj['艺术'] < 60 ? 'red' : 'inherit' }">{{ cj["艺术"] }}</h2>
             </mdui-list-item>
 
             <mdui-list-item>
                 总分
                 <mdui-icon slot="icon" name="done_all"></mdui-icon>
                 <h2 slot="end-icon">{{ calculateTotalScore() }}</h2>
-
             </mdui-list-item>
         </div>
     </div>
