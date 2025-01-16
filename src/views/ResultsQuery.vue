@@ -39,14 +39,6 @@ let cj = ref({
     "艺术": 0
 });
 
-exApi("/ResultsQuery/login", {}).then((req: any) => {
-    if (req.data.isQuery) {
-        CookieManager.setCookie("name", req.data.name);
-        s_name.value = true;
-        name.value = req.data.name;
-    }
-});
-
 function query() {
     qq.value = true;
     exApi("/ResultsQuery/query", { name: name.value }).then((req: any) => {
@@ -67,13 +59,21 @@ function query() {
 }
 
 onMounted(() => {
-    // 检查 cookie 中是否有名字，并根据结果设置 s_name 和 name
-    const storedName = CookieManager.getCookie("name");
-    if (storedName) {
-        s_name.value = true;
-        name.value = storedName;
-        query(); // 如果有名字，自动查询成绩
-    }
+    exApi("/ResultsQuery/login", {}).then((req: any) => {
+        if (req.data.isQuery) {
+            CookieManager.setCookie("name", req.data.name);
+            s_name.value = true;
+            name.value = req.data.name;
+        }
+
+        // 检查 cookie 中是否有名字，并根据结果设置 s_name 和 name
+        const storedName = CookieManager.getCookie("name");
+        if (storedName) {
+            s_name.value = true;
+            name.value = storedName;
+            query(); // 如果有名字，自动查询成绩
+        }
+    });
 });
 
 function calculateTotalScore(): number {
