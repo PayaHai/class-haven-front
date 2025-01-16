@@ -87,9 +87,16 @@ function query() {
         </el-col>
     </div>
 
-    <div v-if="!isErr&&!isOk" id="login" class="center-container mdui-prose">
+    <div v-if="true" id="login" class="center-container mdui-prose">
         <div class="form-container login">
-            <h1 style="margin-bottom: 20px;">期中成绩查询</h1>
+            <h1 style="margin-bottom: 20px;">版本更新中，尽情期待...</h1>
+            <p>2023级10班 - 职二上半学期期末</p>
+        </div>
+    </div>
+
+    <div v-if="false" id="login" class="center-container mdui-prose">
+        <div class="form-container login">
+            <h1 style="margin-bottom: 20px;">期末成绩查询</h1>
             <p>2023级10班 - 职二上半学期期中</p>
             <mdui-text-field variant="outlined" icon="numbers" maxlength="3" counter label="您的姓名" :disabled="s_name" :value="name" @input="name = $event.target.value" style="margin-bottom: 20px;"></mdui-text-field>
             <mdui-button full-width @click="query()" :loading="qq" :disabled="qq">查询</mdui-button>
