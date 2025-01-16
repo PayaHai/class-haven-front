@@ -111,6 +111,7 @@ function calculateTotalScore(): number {
     <div v-if="isOk" class="center-container">
         <div class="form-container login">
             <h1>您的期中成绩</h1>
+            <p>姓名：{{ name }}</p>
             <mdui-list-item>
                 语文
                 <mdui-icon slot="icon" name="book"></mdui-icon>
