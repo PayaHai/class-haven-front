@@ -35,6 +35,7 @@ function goBack() {
             <mdui-button-icon icon="refresh" slot="bottom" id="loading" :loading = "exData.isLoading.value"></mdui-button-icon>
 
             <mdui-navigation-rail-item icon="query_stats" @click="goPath('/results-query')">成绩查询</mdui-navigation-rail-item>
+            <mdui-navigation-rail-item icon="code" target="_blank" href="https://github.com/PayaHai/class-haven-front">开源地址</mdui-navigation-rail-item>
 
             <!-- <mdui-navigation-rail-item v-if="exData.isLogin.value" icon="home" @click="goPath('/')">主页</mdui-navigation-rail-item>
             <mdui-navigation-rail-item v-if="exData.isLogin.value" icon="assignment" @click="goPath('/tool')">工具</mdui-navigation-rail-item>
