@@ -71,7 +71,11 @@ onMounted(() => {
         if (storedName) {
             s_name.value = true;
             name.value = storedName;
-            query(); // 如果有名字，自动查询成绩
+            query()
+        }
+
+        if (s_name.value) {
+            query()
         }
     });
 });
