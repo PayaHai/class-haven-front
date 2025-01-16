@@ -16,7 +16,7 @@ app.use(ElementPlus)
 import router from './router'
 app.use(router)
 
-if (import.meta.env.DEV) {
+if (!import.meta.env.DEV) {
     console.log("请不要恶意调试。");
 
     const checkDebugger = () => {
